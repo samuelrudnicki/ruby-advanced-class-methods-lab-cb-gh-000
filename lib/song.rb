@@ -55,4 +55,5 @@ class Song
     s = self.new_from_filename(filename)
     @@all << s
     s
+  end
 end
