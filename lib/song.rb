@@ -23,8 +23,7 @@ class Song
   end
 
   def self.create_by_name(name)
-    s = Song.new
-    s.name = name
+    s = self.new_by_name(name)
     @@all << s
     s
   end
@@ -51,4 +50,8 @@ class Song
     s.name = filename.split('-')[1].split('.')[0].strip
     s
   end
+
+  def create_from_filename(filename)
+    s = self.new_from_filename(filename)
+    
 end
